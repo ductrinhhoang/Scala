@@ -1,0 +1,82 @@
+1. Values
+	- Co the dinh dang gia tri voi keyword val
+		Vd: val x = 1+1
+		hoac val x: Int = 1+1
+	- Chu y: khi goi val r thi gia tri se khong dc tinh toan lai
+		Vd: val x = 1+1
+		    x = 3 //this does not compile
+
+2. Variables
+	- Dung keyword var, tat nhien gia tri cua bien co the thay doi
+		Vd: 
+			var x = 1+1
+		hoac	var x: Int = 1+1
+
+3. Blocks
+	- Dung trong {}. No se lay gia tri cua bieu thuc cuoi trong block
+		vd:
+			println({
+  				val x = 1 + 1
+  				x + 1
+			}) // 3	
+
+4. Function
+	- Dung keyword val
+		vd: 
+			val addOne = (x: Int) => x + 1
+			println(addOne(1)) // 2
+
+5. Method
+	- Dung keyword def
+		vd:
+			def sub(a: Int, b: Int): Float = {
+				a-b
+			}
+
+6. Class
+	- Dung keyword class, co ban giong java:
+		vd:
+			class Point(x: Int, y: Int){
+				def show(): Unit = {//Dung Unit cho cac phuong thuc void
+					println("x = "+x+", y = "+y)
+				}	
+			}
+			val p = Point(2, 3)//x = 2.0, y = 3.0
+
+7. Case Class
+	- La class o dang dac biet: immutable and compared by value
+	- Tao present khong dung keyword new
+		vd:
+			case class Point(x: Float, y: Float)
+			val compare = (_p1: Point, _p2: Point) => {
+				var str: String
+				if(_p1 == _p2)
+					str = _p1 + " is same as " + _p2
+				else
+					str = _p1 + " isn't same as " + _p2
+				str
+			}
+			var p1 = Point(2,3)
+			var p2 = Point(2,3)
+			var p3 = Point(2,5)
+			print(compare(p1, p2)) //Point(2.0,3.0) is same as Point(2.0,3.0)
+			print(compare(p1, p3)) //Point(2.0,3.0) is same as Point(2.0,5.0)
+
+8. Object
+	- Mot the hien don minh dinh nghia ma khong can tao class
+		vd:
+			object anonymous {
+    				private var count: Int = 0
+    				def next() {
+        				count += 1
+        				println(count)
+    				}
+			}
+			anonymous.next() // 1
+			anonymous.next() // 2
+
+9. Trait
+	- Ho tro da ke thua
+
+10. Main:
+	- Vi do tuong tu Java
