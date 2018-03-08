@@ -1,4 +1,9 @@
-object Main {
-  def main(args: Array[String]): Unit =
-    println("Hello, Scala developer!")
-}
+val list = List(
+  "a string",
+  732,  // an integer
+  'c',  // a character
+  true, // a boolean value
+  () => "an anonymous function returning a string"
+)
+
+list.foreach(element => println(element))
