@@ -1,0 +1,15 @@
+Co ban giong Java:
+  vd:
+  class Point(var _x: Float = 0, var _y: Float = 0){
+    private var x : Float = _x
+    private var y : Float = _y
+    def show(){
+      println("x = "+x+", y = "+y)
+    }
+  }
+
+  var p1 = new Point(3, 4)
+  p1.show()//x = 3.0, y = 4.0
+
+  var p1 = new Point(4,4)
+  p1.show()//x = 4.0, y = 4.0

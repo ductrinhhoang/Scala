@@ -1,9 +1,13 @@
-val list = List(
-  "a string",
-  732,  // an integer
-  'c',  // a character
-  true, // a boolean value
-  () => "an anonymous function returning a string"
-)
+class Point(var _x: Float = 0, var _y: Float = 0){
+  private var x : Float = _x
+  private var y : Float = _y
+  def show(){
+    println("x = "+x+", y = "+y)
+  }
+}
 
-list.foreach(element => println(element))
+var p1 = new Point(3, 4)
+p1.show()
+p1 = new Point(4,3)
+p1.show()
+println(p1.x)
