@@ -1,0 +1,21 @@
+- Option[T] la doi tuong co type T (phai dat trong some(obj)) hoac None
+///
+- La Object duoc tao co phuong thuc apply va unapply
+- apply dung de tao object moi, con unapply thi de tra ve argument
+vd:
+object CustomerID {
+
+  def apply(name: String) = s"$name--${Random.nextLong}"
+
+  def unapply(customerID: String): Option[String] = {
+    val name = customerID.split("--").head
+    if (name.nonEmpty) Some(name) else None
+  }
+}
+
+val customer1ID = CustomerID("Sukyoung")  // Sukyoung--23098234908
+val customerID(Name) = customer1Id // Tra ve Name
+println(name) //Sukyoung
+
+	
+	

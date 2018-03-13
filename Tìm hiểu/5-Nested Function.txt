@@ -1,0 +1,11 @@
+- Ham long ham
+VD:
+  def fractorial(n: Int, deg: Int): Int = {
+    def fract(n: Int): Int = {
+      if (n >= 0 && n < deg) 1
+      else n * fract(n - deg)
+    }
+    fract(n)
+  }
+
+  print(fractorial(3, 1)) 

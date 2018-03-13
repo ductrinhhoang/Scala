@@ -1,0 +1,34 @@
+La cau truc manh hon switch-case trong java, co the phan loai ca cac dang class
+VD:
++ co ban
+  import scala.util.Random
+
+  val numb: Int = Random.nextInt(10)
+
+  def matchTest(n: Int): String = {
+    n match {
+      case 1 => "One"
+      case 2 => "Two"
+      case _ => "More"
+    }
+  }
+
+  print(matchTest(numb))
+
++ cao hon chut
+  abstract class Devide
+
+  case class Mobile() extends Devide
+
+  case class Computer() extends Devide
+
+  var dev = new Mobile()
+
+  def matchTest(dev: Devide): String = {
+    dev match {
+      case a: Mobile => "Mobile"
+      case b: Computer => "Computer"
+    }
+  }
+
+  print(matchTest(dev))

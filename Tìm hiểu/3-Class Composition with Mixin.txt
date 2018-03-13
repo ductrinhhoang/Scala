@@ -1,0 +1,17 @@
+- Mixin la trait dung de dinh dang class
+- Ho tro da ke thua
+vd:
+  abstract class A{
+    val message: String
+  }
+  class B extends A{
+    val message = "This is Class B"
+  }
+  trait C extends A{
+    def upperMessage = message.toUpperCase()
+  }
+  class D extends B with C
+
+  var obj = new D()
+  println(obj.upperMessage)
+  println(obj.message)

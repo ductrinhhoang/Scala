@@ -1,0 +1,13 @@
+- Trait dung de chia se interface va cac truong giua cac class (co the hieu nhu interface)
+- Class va Object co the ke thua Trait nhung Trait khong the khoi tao va khong co parameter
+- Dung keyword trait de tao 1 Trait
+VD:
+  trait Pet{
+    val name : String
+  }
+  class Dog extends Pet{
+    override val name: String = "Dog"
+  }
+  class Cat(val name: String = "Default Cat") extends Pet
+  var kit = new Cat("Kitty")
+  print(kit.name)
